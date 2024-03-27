@@ -9,7 +9,7 @@
   "repository": "github:maicol07/eslint-config",
   "version": "2.4.1",
   "main": "index.js",
-  "packageManager": "pnpm@8.12.0",
+  "packageManager": "pnpm@8.15.5",
   "files": [
     "README.md",
     "index.js"
@@ -19,29 +19,29 @@
     "prepublishOnly": "eslint --max-warnings=0 index.ts && pnpm build"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^6.15.0",
-    "@typescript-eslint/parser": "^6.15.0",
-    "eslint": "^8.56.0",
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "eslint": "^8.57.0",
     "eslint-config-airbnb-base": ">=15.0.0",
-    "eslint-config-airbnb-typescript": "^17.1.0",
+    "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-lit": "^1.11.0",
     "eslint-plugin-mithril": ">=0.2.0",
     "eslint-plugin-new-with-error": "^5.0.0",
     "eslint-plugin-only-warn": ">=1.0.3",
-    "eslint-plugin-regexp": "^2.1.2",
-    "eslint-plugin-simple-import-sort": ">=7.0.0",
-    "eslint-plugin-sonarjs": "^0.23.0",
-    "eslint-plugin-unicorn": "^50.0.1",
+    "eslint-plugin-regexp": "^2.4.0",
+    "eslint-plugin-simple-import-sort": "^12.0.0",
+    "eslint-plugin-sonarjs": "^0.24.0",
+    "eslint-plugin-unicorn": "^51.0.1",
     "eslint-plugin-wc": "^2.0.4",
     "eslint-plugin-you-dont-need-lodash-underscore": "^6.13.0"
   },
   "devDependencies": {
-    "@types/eslint": "^8.56.0",
-    "@types/node": "^20.10.5",
-    "typescript": "^5.3.3"
+    "@types/eslint": "^8.56.6",
+    "@types/node": "^20.11.30",
+    "typescript": "^5.4.3"
   },
   "peerDependencies": {
-    "typescript": ">=4.5.4"
+    "typescript": ">=5"
   }
 }
