@@ -1,160 +1,146 @@
-import {Linter} from 'eslint';
-import Config = Linter.Config;
+import tsEslint from 'typescript-eslint';
+import 'eslint-plugin-only-warn';
+import {configs as wcConfigs} from 'eslint-plugin-wc';
+import {configs as litConfigs} from 'eslint-plugin-lit';
+import {configs as regexpConfigs} from 'eslint-plugin-regexp';
+import sonarJs from 'eslint-plugin-sonarjs';
+import eslintPluginUnicorn from 'eslint-plugin-unicorn';
+import airbnbTs from 'eslint-config-airbnb-typescript-x/base';
+import globals from 'globals';
 
-const config: Config = {
-  env: {
-    browser: true,
-    es6: true,
-    es2017: true,
-    es2020: true,
-    es2021: true
-  },
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true
+export default tsEslint.config(
+  tsEslint.configs.strictTypeChecked,
+  tsEslint.configs.stylisticTypeChecked,
+  ...airbnbTs,
+  wcConfigs['flat/recommended'],
+  wcConfigs['flat/best-practice'],
+  litConfigs['flat/recommended'],
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+  regexpConfigs['flat/recommended'],
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+  sonarJs.configs.recommended,
+  eslintPluginUnicorn.configs['flat/recommended'],
+  {
+    languageOptions: {
+      globals: {
+        ...globals.browser
+      },
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname
+      }
     },
-    ecmaVersion: 'latest',
-    project: ['./tsconfig.json'],
-    lib: ['esnext']
-  },
-  plugins: [
-    '@typescript-eslint',
-    'new-with-error',
-    'simple-import-sort',
-    'only-warn'
-  ],
-  extends: [
-    'airbnb-base',
-    'airbnb-typescript/base',
-    'plugin:wc/recommended',
-    'plugin:lit/recommended',
-    'plugin:mithril/recommended',
-    'plugin:regexp/recommended',
-    'plugin:sonarjs/recommended',
-    'plugin:unicorn/recommended',
-    'plugin:you-dont-need-lodash-underscore/compatible',
-    'plugin:@typescript-eslint/recommended-requiring-type-checking'
-  ],
-  rules: {
-    'capitalized-comments': [
-      'error',
-      'always',
-      {
-        ignorePattern: 'pragma|ignored|noinspection',
-        ignoreInlineComments: true
-      }
-    ],
-    'comma-dangle': 'off',
-    'class-methods-use-this': 'off',
-    'eol-last': 'off',
-    'func-names': 'off',
-    'lines-between-class-members': 'off',
-    'new-cap': ['error', {capIsNewExceptions: ['Stream'], properties: false}],
-    'no-invalid-this': 'off',
-    'no-multiple-empty-lines': 'off',
-    'no-param-reassign': ['error', {props: false}],
-    'no-restricted-syntax': 'off',
-    'no-underscore-dangle': 'off',
-    'no-unused-vars': 'off',
-    'no-void': ['error', {allowAsStatement: true}],
-    'object-curly-spacing': 'off',
-    'prefer-const': ['error', {destructuring: 'all'}],
-    'sort-imports': 'off', // See simple-import-sort plugin
+    rules: {
+      'capitalized-comments': 'off',
+      'class-methods-use-this': 'off',
+      'func-names': 'off',
+      'new-cap': ['error', {capIsNewExceptions: ['Stream'], properties: false}],
+      'no-invalid-this': 'off',
+      'no-param-reassign': ['error', {props: false}],
+      'no-restricted-syntax': 'off',
+      'no-underscore-dangle': 'off',
+      'no-unused-vars': 'off',
+      'no-void': ['error', {allowAsStatement: true}],
+      'prefer-const': ['error', {destructuring: 'all'}],
+      // 'sort-imports': 'off',
 
-    // Plugins
-    '@typescript-eslint/comma-dangle': ['error', 'never'],
-    '@typescript-eslint/object-curly-spacing': ['error', 'never'],
-    '@typescript-eslint/lines-between-class-members': ['error', 'always', {exceptAfterSingleLine: true}],
-    '@typescript-eslint/no-invalid-this': 'off',
-    '@typescript-eslint/no-unused-vars': ['error', {vars: 'all', args: 'none', ignoreRestSiblings: false}],
-    // "custom-elements/extends-correct-class": "off",
-    // Conflicts when extending other Web Components
-    'filenames/match-regex': 'off',
-    'i18n-text/no-en': 'off',
-    // Allow imports to modules without extension
-    'import/extensions': ['error',
-      {
-        js: 'ignorePackages', // Temporary fix for Lit (see https://github.com/import-js/eslint-plugin-import/issues/2141)
-        ts: 'never',
-        jsx: 'never',
-        tsx: 'never',
-        vue: 'always',
+      // Formatting
+      '@stylistic/comma-dangle': ['error', 'never'],
+      '@stylistic/object-curly-spacing': ['error', 'never'],
+      '@stylistic/lines-between-class-members': ['error', {
+        enforce: [
+          {blankLine: 'never', prev: 'field', next: 'field'},
+          {blankLine: 'always', prev: 'method', next: 'field'},
+          {blankLine: 'always', prev: 'field', next: 'method'},
+          {blankLine: 'always', prev: 'method', next: 'method'}
+        ]
+      }],
+      'prettier/prettier': 'off',
 
-        // Require extension for common assets (based on https://github.com/vitejs/vite/blob/main/packages/vite/src/node/constants.ts)
+      // Code quality
+      '@typescript-eslint/no-invalid-this': 'off', // This rule is already covered by TS compiler
+      '@typescript-eslint/no-unused-vars': ['error', {vars: 'all', args: 'none', ignoreRestSiblings: false}],
+      // "custom-elements/extends-correct-class": "off",
+      // Conflicts when extending other Web Components
+      'filenames/match-regex': 'off',
+      'i18n-text/no-en': 'off',
+      // Allow imports to modules without extension
+      'import-x/extensions': ['error',
+        {
+          js: 'ignorePackages', // Temporary fix for Lit (see https://github.com/import-js/eslint-plugin-import-x/issues/2141)
+          ts: 'never',
+          jsx: 'never',
+          tsx: 'never',
+          vue: 'always',
 
-        // Images
-        apng: 'always',
-        png: 'always',
-        jpg: 'always',
-        jpeg: 'always',
-        pjpeg: 'always',
-        pjp: 'always',
-        gif: 'always',
-        svg: 'always',
-        ico: 'always',
-        webp: 'always',
-        bmp: 'always',
-        tiff: 'always',
-        avif: 'always',
-        raw: 'always',
+          // Require extension for common assets (based on https://github.com/vitejs/vite/blob/main/packages/vite/src/node/constants.ts)
 
-        // Media
-        mp4: 'always',
-        webm: 'always',
-        ogg: 'always',
-        mp3: 'always',
-        wav: 'always',
-        flac: 'always',
-        aac: 'always',
-        oga: 'always',
-        m4a: 'always',
-        amr: 'always',
-        wma: 'always',
-        aiff: 'always',
-        caf: 'always',
-        ac3: 'always',
-        opus: 'always',
-        mkv: 'always',
-        mov: 'always',
-        avi: 'always',
+          // Images
+          apng: 'always',
+          png: 'always',
+          jpg: 'always',
+          jpeg: 'always',
+          pjpeg: 'always',
+          pjp: 'always',
+          gif: 'always',
+          svg: 'always',
+          ico: 'always',
+          webp: 'always',
+          bmp: 'always',
+          tiff: 'always',
+          avif: 'always',
+          raw: 'always',
 
-        // Fonts
-        woff: 'always',
-        woff2: 'always',
-        eot: 'always',
-        ttf: 'always',
-        otf: 'always',
+          // Media
+          mp4: 'always',
+          webm: 'always',
+          ogg: 'always',
+          mp3: 'always',
+          wav: 'always',
+          flac: 'always',
+          aac: 'always',
+          oga: 'always',
+          m4a: 'always',
+          amr: 'always',
+          wma: 'always',
+          aiff: 'always',
+          caf: 'always',
+          ac3: 'always',
+          opus: 'always',
+          mkv: 'always',
+          mov: 'always',
+          avi: 'always',
 
-        // Stylesheets
-        css: 'always',
-        scss: 'always',
+          // Fonts
+          woff: 'always',
+          woff2: 'always',
+          eot: 'always',
+          ttf: 'always',
+          otf: 'always',
 
-        // Other
-        json: 'always',
-        yaml: 'always',
-        toml: 'always',
-        webmanifest: 'always',
-        xml: 'always',
-        md: 'always',
-        txt: 'always',
-        csv: 'always',
-        pdf: 'always'
-      }
-    ],
-    'import/no-extraneous-dependencies': 'off', // Dependencies are not found when installed with PNPM
-    'import/no-unresolved': 'off', // This rule doesn't work with relative imports
-    'import/order': 'off', // Already handled (better) by simple-import-sort/imports
-    'import/prefer-default-export': 'error',
-    'mithril/jsx-no-target-blank': 'off',
-    'mithril/jsx-uses-mithril': 'off', // Will be declared as a global variable
-    'n/file-extension-in-import': 'off',
-    'new-with-error/new-with-error': 'error',
-    'prettier/prettier': 'off',
-    'simple-import-sort/imports': 'error',
-    'simple-import-sort/exports': 'error',
-    'unicorn/filename-case': 'off'
+          // Stylesheets
+          css: 'always',
+          scss: 'always',
+
+          // Other
+          json: 'always',
+          yaml: 'always',
+          toml: 'always',
+          webmanifest: 'always',
+          xml: 'always',
+          md: 'always',
+          txt: 'always',
+          csv: 'always',
+          pdf: 'always'
+        }
+      ],
+      'import-x/no-extraneous-dependencies': 'off', // Dependencies are not found when installed with PNPM
+      'import-x/no-unresolved': 'off', // This rule doesn't work with relative imports
+      'import-x/order': 'off', // Already handled (better) by simple-import-sort/imports
+      'import-x/prefer-default-export': 'error',
+      'no-restricted-exports': 'off',
+      'n/file-extension-in-import': 'off',
+      'unicorn/filename-case': 'off'
+    }
   }
-};
-
-export = config;
+);
