@@ -27,6 +27,7 @@ export default tsEslint.config(
       },
       parserOptions: {
         projectService: true,
+        // @ts-ignore
         tsconfigRootDir: import.meta.dirname
       }
     },

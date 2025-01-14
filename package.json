@@ -1,5 +1,6 @@
 {
-  "name": "@maicol07/eslint-config",
+  "name": "@maicol07/eslint-config-monorepo",
+  "private": true,
   "type": "module",
   "homepage": "https://github.com/maicol07/eslint-config",
   "author": {
@@ -18,35 +19,5 @@
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "eslint --max-warnings=0 index.ts && pnpm build"
-  },
-  "dependencies": {
-    "eslint": "^9.18.0",
-    "eslint-config-airbnb-typescript-x": "github:claabs/eslint-config-airbnb-typescript-x",
-    "eslint-import-resolver-typescript": "^3.7.0",
-    "eslint-plugin-lit": "^1.11.0",
-    "eslint-plugin-only-warn": ">=1.0.3",
-    "eslint-plugin-regexp": "^2.4.0",
-    "eslint-plugin-simple-import-sort": "^12.0.0",
-    "eslint-plugin-sonarjs": "^3.0.1",
-    "eslint-plugin-unicorn": "^56.0.1",
-    "eslint-plugin-wc": "^2.2.0",
-    "globals": "^15.14.0",
-    "jiti": "^2.4.2",
-    "typescript-eslint": "^8.20.0"
-  },
-  "devDependencies": {
-    "@types/eslint": "^9.6.1",
-    "@types/node": "^22.10.6",
-    "typescript": "^5.7.3"
-  },
-  "peerDependencies": {
-    "typescript": ">=5"
-  },
-  "pnpm": {
-    "peerDependencyRules": {
-      "allowedVersions": {
-        "eslint": "9"
-      }
-    }
   }
 }
