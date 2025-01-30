@@ -1,5 +1,4 @@
 import tsEslint from 'typescript-eslint';
-import 'eslint-plugin-only-warn';
 import {configs as wcConfigs} from 'eslint-plugin-wc';
 import {configs as litConfigs} from 'eslint-plugin-lit';
 import {configs as regexpConfigs} from 'eslint-plugin-regexp';
@@ -26,27 +25,17 @@ export default tsEslint.config(
         ...globals.browser
       },
       parserOptions: {
+        sourceType: 'module',
         projectService: true,
         // @ts-ignore
         tsconfigRootDir: import.meta.dirname
       }
     },
     rules: {
-      'capitalized-comments': 'off',
-      'class-methods-use-this': 'off',
-      'func-names': 'off',
-      'new-cap': ['error', {capIsNewExceptions: ['Stream'], properties: false}],
-      'no-invalid-this': 'off',
-      'no-param-reassign': ['error', {props: false}],
-      'no-restricted-syntax': 'off',
-      'no-underscore-dangle': 'off',
-      'no-unused-vars': 'off',
-      'no-void': ['error', {allowAsStatement: true}],
-      'prefer-const': ['error', {destructuring: 'all'}],
-      // 'sort-imports': 'off',
-
       // Formatting
+      'capitalized-comments': 'off',
       '@stylistic/comma-dangle': ['error', 'never'],
+      '@stylistic/max-len': ['error', {code: 120}],
       '@stylistic/object-curly-spacing': ['error', 'never'],
       '@stylistic/lines-between-class-members': ['error', {
         enforce: [
@@ -59,6 +48,18 @@ export default tsEslint.config(
       'prettier/prettier': 'off',
 
       // Code quality
+      'func-names': ['error', 'as-needed'],
+      'new-cap': 'error',
+      'no-new': 'off',
+      'no-param-reassign': ['error', {props: false}],
+      'no-plusplus': 'off',
+      'no-return-assign': 'error',
+      'no-restricted-exports': 'off',
+      'no-restricted-syntax': 'off',
+      'no-underscore-dangle': 'off',
+      'no-void': ['error', {allowAsStatement: true}],
+      'prefer-const': ['error', {destructuring: 'all'}],
+
       '@typescript-eslint/no-invalid-this': 'off', // This rule is already covered by TS compiler
       '@typescript-eslint/no-unused-vars': ['error', {vars: 'all', args: 'none', ignoreRestSiblings: false}],
       // "custom-elements/extends-correct-class": "off",
@@ -139,9 +140,9 @@ export default tsEslint.config(
       'import-x/no-unresolved': 'off', // This rule doesn't work with relative imports
       'import-x/order': 'off', // Already handled (better) by simple-import-sort/imports
       'import-x/prefer-default-export': 'error',
-      'no-restricted-exports': 'off',
       'n/file-extension-in-import': 'off',
-      'unicorn/filename-case': 'off'
+      'unicorn/filename-case': 'off',
+      'unicorn/prevent-abbreviations': ['error', {replacements: {props: false}}]
     }
   }
 );
