@@ -1,3 +1,5 @@
+import 'eslint-plugin-only-warn';
+
 import tsEslint from 'typescript-eslint';
 import {configs as wcConfigs} from 'eslint-plugin-wc';
 import {configs as litConfigs} from 'eslint-plugin-lit';
