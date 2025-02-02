@@ -10,7 +10,7 @@
   "repository": "github:maicol07/eslint-config",
   "version": "2.4.2",
   "main": "index.js",
-  "packageManager": "pnpm@10.0.0",
+  "packageManager": "pnpm@10.1.0",
   "files": [
     "README.md",
     "index.js"
