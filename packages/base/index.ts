@@ -36,8 +36,12 @@ export default tsEslint.config(
     rules: {
       // Formatting
       'capitalized-comments': 'off',
+      'max-len': 'off', // Disabled because specified below with stylistic plugin
       '@stylistic/comma-dangle': ['error', 'never'],
-      '@stylistic/max-len': ['error', {code: 120}],
+      '@stylistic/max-len': ['error', {
+        code: 120,
+        tabWidth: 2
+      }],
       '@stylistic/object-curly-spacing': ['error', 'never'],
       '@stylistic/lines-between-class-members': ['error', {
         enforce: [
