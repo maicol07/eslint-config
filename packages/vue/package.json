@@ -1,0 +1,44 @@
+{
+  "name": "@maicol07/eslint-config-vue",
+  "type": "module",
+  "homepage": "https://github.com/maicol07/eslint-config",
+  "author": {
+    "name": "Maicol Battistini",
+    "email": "webmaster@maicol07.it",
+    "url": "https://maicol07.it"
+  },
+  "repository": "github:maicol07/eslint-config",
+  "version": "2.4.2",
+  "main": "index.js",
+  "packageManager": "pnpm@10.1.0",
+  "files": [
+    "README.md",
+    "index.js"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "eslint --max-warnings=0 index.ts && pnpm build"
+  },
+  "dependencies": {
+    "eslint-plugin-vue": "^9.32.0",
+    "eslint-plugin-vue-scoped-css": "^2.9.0",
+    "eslint-plugin-vuejs-accessibility": "^2.4.1",
+    "typescript-eslint": "^8.20.0",
+    "vue-eslint-parser": "^9.4.3"
+  },
+  "devDependencies": {
+    "@types/eslint": "^9.6.1",
+    "@types/node": "^22.10.6",
+    "typescript": "^5.7.3"
+  },
+  "peerDependencies": {
+    "typescript": ">=5"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "eslint": "9"
+      }
+    }
+  }
+}
