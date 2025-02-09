@@ -10,7 +10,7 @@
   "repository": "github:maicol07/eslint-config",
   "version": "2.4.2",
   "main": "index.js",
-  "packageManager": "pnpm@10.1.0",
+  "packageManager": "pnpm@10.2.1",
   "files": [
     "README.md",
     "index.js"
@@ -23,12 +23,12 @@
     "eslint-plugin-vue": "^9.32.0",
     "eslint-plugin-vue-scoped-css": "^2.9.0",
     "eslint-plugin-vuejs-accessibility": "^2.4.1",
-    "typescript-eslint": "^8.20.0",
+    "typescript-eslint": "^8.23.0",
     "vue-eslint-parser": "^9.4.3"
   },
   "devDependencies": {
     "@types/eslint": "^9.6.1",
-    "@types/node": "^22.10.6",
+    "@types/node": "^22.13.1",
     "typescript": "^5.7.3"
   },
   "peerDependencies": {

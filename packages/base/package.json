@@ -10,7 +10,7 @@
   "repository": "github:maicol07/eslint-config",
   "version": "2.4.2",
   "main": "index.js",
-  "packageManager": "pnpm@10.1.0",
+  "packageManager": "pnpm@10.2.1",
   "files": [
     "README.md",
     "index.js"
@@ -20,7 +20,7 @@
     "prepublishOnly": "eslint --max-warnings=0 index.ts && pnpm build"
   },
   "dependencies": {
-    "eslint": "^9.18.0",
+    "eslint": "^9.20.0",
     "eslint-config-airbnb-typescript-x": "github:claabs/eslint-config-airbnb-typescript-x",
     "eslint-import-resolver-typescript": "^3.7.0",
     "eslint-plugin-lit": "^1.11.0",
@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@types/eslint": "^9.6.1",
-    "@types/node": "^22.10.6",
+    "@types/node": "^22.13.1",
     "typescript": "^5.7.3"
   },
   "peerDependencies": {
