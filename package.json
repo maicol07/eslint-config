@@ -9,7 +9,7 @@
     "url": "https://maicol07.it"
   },
   "repository": "github:maicol07/eslint-config",
-  "version": "2.4.2",
+  "version": "3.0.0-rc.1",
   "main": "index.js",
   "packageManager": "pnpm@10.5.0",
   "files": [
