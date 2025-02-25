@@ -19,5 +19,12 @@
   "scripts": {
     "build": "tsc",
     "prepublishOnly": "eslint --max-warnings=0 index.ts && pnpm build"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "eslint": "9"
+      }
+    }
   }
 }

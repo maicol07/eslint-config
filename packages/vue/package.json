@@ -33,12 +33,5 @@
   },
   "peerDependencies": {
     "typescript": ">=5"
-  },
-  "pnpm": {
-    "peerDependencyRules": {
-      "allowedVersions": {
-        "eslint": "9"
-      }
-    }
   }
 }
