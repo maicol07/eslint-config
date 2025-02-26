@@ -7,6 +7,9 @@
     "email": "webmaster@maicol07.it",
     "url": "https://maicol07.it"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": "github:maicol07/eslint-config",
   "version": "3.0.0-rc.1",
   "main": "index.js",
