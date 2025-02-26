@@ -16,7 +16,6 @@ export default tsEslint.config(
   wcConfigs['flat/recommended'],
   wcConfigs['flat/best-practice'],
   litConfigs['flat/recommended'],
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   regexpConfigs['flat/recommended'],
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   sonarJs.configs.recommended,
@@ -27,9 +26,7 @@ export default tsEslint.config(
         ...globals.browser
       },
       parserOptions: {
-        sourceType: 'module',
         projectService: true,
-        // @ts-ignore
         tsconfigRootDir: import.meta.dirname
       }
     },
