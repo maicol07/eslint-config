@@ -5,7 +5,7 @@ import eslintPluginVueScopedCSS from 'eslint-plugin-vue-scoped-css';
 
 // noinspection JSUnusedGlobalSymbols
 export default [
-  ...pluginVue.configs['flat/recommended'],
+  ...(pluginVue.configs['flat/recommended'] as Linter.Config[]),
   ...pluginVueA11y.configs['flat/recommended'],
   ...eslintPluginVueScopedCSS.configs['flat/recommended'],
   {
