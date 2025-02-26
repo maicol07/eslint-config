@@ -40,7 +40,13 @@ export default tsEslint.config(
       '@stylistic/comma-dangle': ['error', 'never'],
       '@stylistic/max-len': ['error', {
         code: 120,
-        tabWidth: 2
+        tabWidth: 2,
+        ignoreComments: true,
+        ignoreTrailingComments: true,
+        ignoreUrls: true,
+        ignoreStrings: true,
+        ignoreTemplateLiterals: true,
+        ignoreRegExpLiterals: true
       }],
       '@stylistic/object-curly-spacing': ['error', 'never'],
       '@stylistic/lines-between-class-members': ['error', {
