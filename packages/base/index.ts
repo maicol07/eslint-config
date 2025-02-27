@@ -17,7 +17,6 @@ export default tsEslint.config(
   wcConfigs['flat/best-practice'],
   litConfigs['flat/recommended'],
   regexpConfigs['flat/recommended'],
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   sonarJs.configs.recommended,
   eslintPluginUnicorn.configs.recommended,
   {
