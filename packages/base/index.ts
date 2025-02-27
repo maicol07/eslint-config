@@ -8,6 +8,7 @@ import sonarJs from 'eslint-plugin-sonarjs';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import airbnbTs from 'eslint-config-airbnb-typescript-x/base';
 import globals from 'globals';
+import {Linter} from 'eslint';
 
 export default tsEslint.config(
   tsEslint.configs.strictTypeChecked,
@@ -153,4 +154,4 @@ export default tsEslint.config(
       'unicorn/prevent-abbreviations': ['error', {replacements: {props: false}}]
     }
   }
-);
+) as Linter.Config[];
