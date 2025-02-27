@@ -16,7 +16,8 @@
   "packageManager": "pnpm@10.5.0",
   "files": [
     "README.md",
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "scripts": {
     "build": "tsc",

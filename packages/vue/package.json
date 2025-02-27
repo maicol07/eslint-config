@@ -16,7 +16,8 @@
   },
   "files": [
     "README.md",
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "scripts": {
     "build": "tsc",
