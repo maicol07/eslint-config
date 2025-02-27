@@ -24,22 +24,22 @@
     "prepublishOnly": "eslint --max-warnings=0 index.ts && pnpm build"
   },
   "dependencies": {
-    "eslint": "^9.20.0",
+    "eslint": "^9.21.0",
     "eslint-config-airbnb-typescript-x": "github:claabs/eslint-config-airbnb-typescript-x",
-    "eslint-import-resolver-typescript": "^3.7.0",
+    "eslint-import-resolver-typescript": "^3.8.3",
     "eslint-plugin-lit": "^1.11.0",
     "eslint-plugin-only-warn": "^1.1.0",
     "eslint-plugin-regexp": "^2.7.0",
     "eslint-plugin-simple-import-sort": "^12.0.0",
-    "eslint-plugin-sonarjs": "^3.0.1",
-    "eslint-plugin-unicorn": "^56.0.1",
-    "eslint-plugin-wc": "^2.2.0",
-    "globals": "^15.14.0",
+    "eslint-plugin-sonarjs": "^3.0.2",
+    "eslint-plugin-unicorn": "^57.0.0",
+    "eslint-plugin-wc": "^2.2.1",
+    "globals": "^16.0.0",
     "jiti": "^2.4.2"
   },
   "devDependencies": {
     "@types/eslint": "^9.6.1",
-    "@types/node": "^22.13.1",
+    "@types/node": "^22.13.5",
     "typescript": "^5.7.3"
   },
   "peerDependencies": {
