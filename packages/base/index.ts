@@ -19,7 +19,7 @@ export default tsEslint.config(
   regexpConfigs['flat/recommended'],
   // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
   sonarJs.configs.recommended,
-  eslintPluginUnicorn.configs['flat/recommended'],
+  eslintPluginUnicorn.configs.recommended,
   {
     languageOptions: {
       globals: {
