@@ -10,7 +10,7 @@
   "repository": "github:maicol07/eslint-config",
   "version": "3.0.0-rc.1",
   "main": "index.js",
-  "packageManager": "pnpm@10.5.0",
+  "packageManager": "pnpm@10.5.1",
   "publishConfig": {
     "access": "public"
   },
