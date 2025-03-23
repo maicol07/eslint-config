@@ -1,5 +1,6 @@
 *.js
-packages/**/index.d.ts
+*.d.ts
+!types/*.d.ts
 package-lock.json
 pnpm-lock.yaml
 
