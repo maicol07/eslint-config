@@ -1,6 +1,5 @@
 {
-  "name": "@maicol07/eslint-config-monorepo",
-  "private": true,
+  "name": "@maicol07/eslint-config",
   "type": "module",
   "homepage": "https://github.com/maicol07/eslint-config",
   "author": {
@@ -8,19 +7,40 @@
     "email": "webmaster@maicol07.it",
     "url": "https://maicol07.it"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": "github:maicol07/eslint-config",
-  "version": "3.0.0-rc.1",
+  "version": "3.0.0-rc.3",
   "main": "index.js",
-  "packageManager": "pnpm@10.5.0",
+  "types": "index.d.ts",
+  "packageManager": "pnpm@10.6.5",
   "files": [
     "README.md",
-    "index.js"
+    "index.js",
+    "index.d.ts",
+    "types/*.d.ts"
   ],
-  "pnpm": {
-    "peerDependencyRules": {
-      "allowedVersions": {
-        "eslint": "9"
-      }
-    }
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "eslint --max-warnings=0 index.ts && pnpm build"
+  },
+  "dependencies": {
+    "@antfu/eslint-config": "^4.11.0",
+    "globals": "^16.0.0",
+    "eslint": "^9.23.0",
+    "eslint-plugin-lit": "^2.0.0",
+    "eslint-plugin-only-warn": "^1.1.0",
+    "eslint-plugin-regexp": "^2.7.0",
+    "eslint-plugin-simple-import-sort": "^12.0.0",
+    "eslint-plugin-sonarjs": "^3.0.2",
+    "eslint-plugin-unicorn": "^57.0.0",
+    "eslint-plugin-vue-scoped-css": "^2.9.0",
+    "eslint-plugin-wc": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/eslint": "^9.6.1",
+    "@types/node": "^22.13.11",
+    "typescript": "^5.8.2"
   }
 }
