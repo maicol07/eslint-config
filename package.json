@@ -23,7 +23,8 @@
   ],
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "eslint --max-warnings=0 index.ts && pnpm build"
+    "prepublishOnly": "eslint --max-warnings=0 index.ts && pnpm build",
+    "inspector": "pnpx @eslint/config-inspector@latest"
   },
   "dependencies": {
     "@antfu/eslint-config": "^4.11.0",
