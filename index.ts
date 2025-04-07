@@ -36,6 +36,7 @@ export default antfu({
       'style/member-delimiter-style': 'error',
       'style/object-curly-spacing': ['error', 'never'],
       'style/semi': ['error', 'always'],
+      'style/quote-props': ['error', 'as-needed'],
       'style/lines-between-class-members': ['error', {
         enforce: [
           {blankLine: 'never', prev: 'field', next: 'field'},
@@ -62,6 +63,7 @@ export default antfu({
           component: 'always'
         }
       }],
-      'vue/no-deprecated-slot-attribute': 'off'
+      'vue/no-deprecated-slot-attribute': 'off',
+      'vue/quote-props': ['error', 'as-needed']
     }
   });
