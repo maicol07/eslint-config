@@ -36,7 +36,7 @@ export default antfu({
       'style/member-delimiter-style': 'error',
       'style/object-curly-spacing': ['error', 'never'],
       'style/semi': ['error', 'always'],
-      '@stylistic/lines-between-class-members': ['error', {
+      'style/lines-between-class-members': ['error', {
         enforce: [
           {blankLine: 'never', prev: 'field', next: 'field'},
           {blankLine: 'always', prev: 'method', next: 'field'},
