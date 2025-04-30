@@ -27,22 +27,22 @@
     "inspector": "pnpx @eslint/config-inspector@latest"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^4.11.0",
-    "eslint": "^9.23.0",
+    "@antfu/eslint-config": "^4.12.0",
+    "eslint": "^9.25.1",
     "eslint-flat-config-utils": "^2.0.1",
-    "eslint-plugin-lit": "^2.0.0",
+    "eslint-plugin-lit": "^2.1.1",
     "eslint-plugin-only-warn": "^1.1.0",
     "eslint-plugin-regexp": "^2.7.0",
     "eslint-plugin-simple-import-sort": "^12.0.0",
     "eslint-plugin-sonarjs": "^3.0.2",
-    "eslint-plugin-unicorn": "^57.0.0",
+    "eslint-plugin-unicorn": "^59.0.0",
     "eslint-plugin-vue-scoped-css": "^2.9.0",
-    "eslint-plugin-wc": "^3.0.0",
+    "eslint-plugin-wc": "^3.0.1",
     "globals": "^16.0.0"
   },
   "devDependencies": {
     "@types/eslint": "^9.6.1",
-    "@types/node": "^22.13.11",
-    "typescript": "^5.8.2"
+    "@types/node": "^22.15.3",
+    "typescript": "^5.8.3"
   }
 }
