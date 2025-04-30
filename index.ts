@@ -64,6 +64,7 @@ export default antfu({
         }
       }],
       'vue/no-deprecated-slot-attribute': 'off',
-      'vue/quote-props': ['error', 'as-needed']
+      'vue/quote-props': ['error', 'as-needed'],
+      'vue/object-curly-spacing': ['error', 'never']
     }
   });
