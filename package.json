@@ -11,7 +11,7 @@
     "access": "public"
   },
   "repository": "github:maicol07/eslint-config",
-  "version": "3.0.0-rc.4",
+  "version": "3.0.0-rc.5",
   "main": "index.js",
   "types": "index.d.ts",
   "packageManager": "pnpm@10.6.5",
