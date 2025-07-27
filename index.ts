@@ -32,6 +32,7 @@ export default antfu({
     rules: {
       'style/arrow-parens': ['error', 'always'],
       'style/block-spacing': ['error', 'never'],
+      'style/brace-style': ['error', '1tbs'],
       'style/comma-dangle': ['error', 'never'],
       'style/member-delimiter-style': 'error',
       'style/object-curly-spacing': ['error', 'never'],
