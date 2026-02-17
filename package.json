@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@antfu/eslint-config": "^5.0.0",
-    "eslint": "^9.32.0",
+    "eslint": "^10.0.0",
     "eslint-flat-config-utils": "^2.1.0",
     "eslint-plugin-lit": "^2.1.1",
     "eslint-plugin-only-warn": "^1.1.0",
