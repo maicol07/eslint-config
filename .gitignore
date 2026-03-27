@@ -3,6 +3,7 @@
 !types/*.d.ts
 package-lock.json
 pnpm-lock.yaml
+.idea/copilot.*.xml
 
 # Created by https://www.toptal.com/developers/gitignore/api/linux,macos,windows,git,phpstorm,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,windows,git,phpstorm,node
