@@ -14,7 +14,7 @@
   "version": "3.0.0-rc.6",
   "main": "index.js",
   "types": "index.d.ts",
-  "packageManager": "pnpm@10.6.5",
+  "packageManager": "pnpm@10.33.0",
   "files": [
     "README.md",
     "index.js",
@@ -27,21 +27,21 @@
     "inspector": "pnpx @eslint/config-inspector@latest"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^5.0.0",
-    "eslint": "^9.32.0",
-    "eslint-flat-config-utils": "^2.1.0",
-    "eslint-plugin-lit": "^2.1.1",
-    "eslint-plugin-only-warn": "^1.1.0",
-    "eslint-plugin-regexp": "^2.9.0",
+    "@antfu/eslint-config": "^7.7.3",
+    "eslint": "^10.1.0",
+    "eslint-flat-config-utils": "^3.0.2",
+    "eslint-plugin-lit": "^2.2.1",
+    "eslint-plugin-only-warn": "^1.2.1",
+    "eslint-plugin-regexp": "^3.1.0",
     "eslint-plugin-simple-import-sort": "^12.0.0",
-    "eslint-plugin-sonarjs": "^3.0.4",
-    "eslint-plugin-vue-scoped-css": "^2.11.0",
-    "eslint-plugin-wc": "^3.0.1",
-    "globals": "^16.3.0"
+    "eslint-plugin-sonarjs": "^4.0.2",
+    "eslint-plugin-vue-scoped-css": "^3.0.0",
+    "eslint-plugin-wc": "^3.1.0",
+    "globals": "^17.4.0"
   },
   "devDependencies": {
     "@types/eslint": "^9.6.1",
-    "@types/node": "^24.1.0",
-    "typescript": "^5.8.3"
+    "@types/node": "^25.5.0",
+    "typescript": "^6.0.2"
   }
 }
