@@ -7,7 +7,8 @@ import globals from 'globals';
 
 export default antfu({
   vue: {
-    a11y: true
+    a11y: true,
+    sfcBlocks: false
   },
 
   typescript: {
