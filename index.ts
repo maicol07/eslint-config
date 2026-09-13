@@ -16,6 +16,7 @@ export default antfu({
   },
 
   rules: {
+    'antfu/no-top-level-await': 'off',
     'func-names': ['error', 'as-needed'],
     'no-param-reassign': ['error', {props: false}],
     'no-plusplus': 'off',
