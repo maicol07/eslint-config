@@ -1,6 +1,5 @@
 import antfu from '@antfu/eslint-config';
 import {configs as litConfigs} from 'eslint-plugin-lit';
-import {configs as regexpConfigs} from 'eslint-plugin-regexp';
 import sonarJs from 'eslint-plugin-sonarjs';
 import eslintPluginVueScopedCSS from 'eslint-plugin-vue-scoped-css';
 import {configs as wcConfigs} from 'eslint-plugin-wc';
@@ -32,7 +31,7 @@ export default antfu({
       ...globals.browser
     }
   }
-}, wcConfigs['flat/recommended'], wcConfigs['flat/best-practice'], litConfigs['flat/recommended'], regexpConfigs['flat/recommended'], sonarJs.configs.recommended, ...eslintPluginVueScopedCSS.configs['flat/recommended'])
+}, wcConfigs['flat/recommended'], wcConfigs['flat/best-practice'], litConfigs['flat/recommended'], sonarJs.configs.recommended, ...eslintPluginVueScopedCSS.configs['flat/recommended'])
   .override('antfu/stylistic/rules', {
     rules: {
       'style/arrow-parens': ['error', 'always'],
