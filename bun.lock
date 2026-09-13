@@ -20,6 +20,7 @@
       "devDependencies": {
         "@types/eslint": "^9.6.1",
         "@types/node": "^26.5.1",
+        "jiti": "^2.7.0",
         "typescript": "^7.0.2",
       },
     },
@@ -422,6 +423,8 @@
     "is-valid-element-name": ["is-valid-element-name@1.0.0", "", { "dependencies": { "is-potential-custom-element-name": "^1.0.0" } }, "sha512-GZITEJY2LkSjQfaIPBha7eyZv+ge0PhBR7KITeCCWvy7VBQrCUdFkvpI+HrAPQjVtVjy1LvlEkqQTHckoszruw=="],
 
     "isexe": ["isexe@2.0.0", "", {}, "sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw=="],
+
+    "jiti": ["jiti@2.7.0", "", { "bin": { "jiti": "lib/jiti-cli.mjs" } }, "sha512-AC/7JofJvZGrrneWNaEnJeOLUx+JlGt7tNa0wZiRPT4MY1wmfKjt2+6O2p2uz2+skll8OZZmJMNqeke7kKbNgQ=="],
 
     "js-levenshtein-esm": ["js-levenshtein-esm@2.0.0", "", {}, "sha512-1n4LEPOL4wRXY8rOQcuA7Iuaphe5xCMayvufCzlLAi+hRsnBRDbSS6XPuV58CBVJxj5D9ApFLyjQ7KzFToyHBw=="],
 
