@@ -15,6 +15,8 @@ export default antfu({
     tsconfigPath: 'tsconfig.json'
   },
 
+  antislop: true,
+
   rules: {
     'antfu/no-top-level-await': 'off',
     'func-names': ['error', 'as-needed'],
