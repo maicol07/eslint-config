@@ -15,7 +15,9 @@ export default antfu({
     tsconfigPath: 'tsconfig.json'
   },
 
-  antislop: true,
+  antislop: {
+    sonarjs: false
+  },
 
   rules: {
     'antfu/no-top-level-await': 'off',
