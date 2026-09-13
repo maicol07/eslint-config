@@ -1,7 +1,7 @@
 {
   "name": "@maicol07/eslint-config",
   "type": "module",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "author": {
     "name": "Maicol Battistini",
     "email": "webmaster@maicol07.it",
