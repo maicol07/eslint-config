@@ -1,23 +1,23 @@
 {
   "name": "@maicol07/eslint-config",
   "type": "module",
-  "homepage": "https://github.com/maicol07/eslint-config",
+  "version": "3.1.0",
   "author": {
     "name": "Maicol Battistini",
     "email": "webmaster@maicol07.it",
     "url": "https://maicol07.it"
   },
+  "homepage": "https://github.com/maicol07/eslint-config",
   "publishConfig": {
     "access": "public"
   },
   "repository": "github:maicol07/eslint-config",
-  "version": "3.1.0",
   "main": "index.js",
   "types": "index.d.ts",
   "files": [
     "README.md",
-    "index.js",
     "index.d.ts",
+    "index.js",
     "types/*.d.ts"
   ],
   "scripts": {
