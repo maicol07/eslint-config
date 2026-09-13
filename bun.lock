@@ -12,6 +12,7 @@
         "eslint-plugin-only-warn": "^1.2.1",
         "eslint-plugin-regexp": "^3.1.0",
         "eslint-plugin-simple-import-sort": "^14.0.0",
+        "eslint-plugin-slop": "^0.1.3",
         "eslint-plugin-sonarjs": "^4.0.2",
         "eslint-plugin-vue-scoped-css": "^3.0.0",
         "eslint-plugin-wc": "^3.1.0",
@@ -216,6 +217,8 @@
 
     "devlop": ["devlop@1.1.0", "", { "dependencies": { "dequal": "^2.0.0" } }, "sha512-RWmIqhcFf1lRYBvNmr7qTNuyCt/7/ns2jbpp1+PalgE/rDQcBT0fioSMUpJ93irlUhC5hrg4cYqe6U+0ImW0rA=="],
 
+    "diff": ["diff@9.0.0", "", {}, "sha512-svtcdpS8CgJyqAjEQIXdb3OjhFVVYjzGAPO8WGCmRbrml64SPw/jJD4GoE98aR7r25A0XcgrK3F02yw9R/vhQw=="],
+
     "diff-sequences": ["diff-sequences@29.6.3", "", {}, "sha512-EjePK1srD3P08o2j4f0ExnylqRs5B9tJjcp9t1krH2qRi8CCdsYfwe9JgSLurFBWwq4uOlipzfk5fHNvwFKr8Q=="],
 
     "domelementtype": ["domelementtype@3.0.0", "", {}, "sha512-umCQid3jKbDmVjx8jGaW7uUykm4DEUeyV21hPxNMo2nV955DhUThwqyOIDtreepP31hl84X7G5U9ZfsWvIB3Pg=="],
@@ -275,6 +278,8 @@
     "eslint-plugin-regexp": ["eslint-plugin-regexp@3.3.0", "", { "dependencies": { "@eslint-community/eslint-utils": "^4.2.0", "@eslint-community/regexpp": "^4.11.0", "comment-parser": "^1.4.0", "jsdoc-type-pratt-parser": "^9.0.0", "refa": "^0.12.1", "regexp-ast-analysis": "^0.7.1", "scslre": "^0.3.0" }, "peerDependencies": { "eslint": ">=9.38.0" } }, "sha512-TT0JTQbW7CRKohntpGAsMdQ1K3MsmJK4gdAhKJtIwlJ0JvuYxauymFgJdvqxIY4lqNj0EuRZWVrymQtEdJYEFg=="],
 
     "eslint-plugin-simple-import-sort": ["eslint-plugin-simple-import-sort@14.0.0", "", { "peerDependencies": { "eslint": ">=5.0.0" } }, "sha512-NUJO0+XFCkk+o5EsAJruTgnfMEpeWrPWeJS15UVF60GgXmqz1BJ9/3hzlvG7lkL8Bubzos5cCLptThbFfPnSMQ=="],
+
+    "eslint-plugin-slop": ["eslint-plugin-slop@0.1.3", "", { "dependencies": { "diff": "^9.0.0" }, "peerDependencies": { "eslint": "^10.0.0" } }, "sha512-BktDwEdrqqy+THOMvSBXsrzcb6hZp2pPfLeEYXU66cP809UroTpzeQK0lFLa1u9XlC12GCSq95NB9xEZxyr89w=="],
 
     "eslint-plugin-sonarjs": ["eslint-plugin-sonarjs@4.2.0", "", { "dependencies": { "@eslint-community/regexpp": "^4.12.2", "builtin-modules": "^3.3.0", "bytes": "^3.1.2", "functional-red-black-tree": "^1.0.1", "globals": "^17.7.0", "jsx-ast-utils-x": "^0.1.0", "lodash.merge": "^4.6.2", "minimatch": "^10.2.5", "scslre": "^0.3.0", "semver": "^7.8.5", "ts-api-utils": "^2.5.0", "typescript": ">=5 <6.1.0", "yaml": "^2.9.0" }, "peerDependencies": { "eslint": "^8.0.0 || ^9.0.0 || ^10.0.0" } }, "sha512-bqADfuNtTL7VK6RU29eoiFTtaaBKIpVPuX3bOl+rBpWSBa0zIBVZlqZNZQjfP6s4iXkAJokv5IsD8OsACkwApg=="],
 
