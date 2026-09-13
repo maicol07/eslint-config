@@ -27,13 +27,13 @@
     "inspector": "pnpx @eslint/config-inspector@latest"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^7.7.3",
+    "@antfu/eslint-config": "^9.5.1",
     "eslint": "^10.1.0",
     "eslint-flat-config-utils": "^3.0.2",
     "eslint-plugin-lit": "^2.2.1",
     "eslint-plugin-only-warn": "^1.2.1",
     "eslint-plugin-regexp": "^3.1.0",
-    "eslint-plugin-simple-import-sort": "^12.0.0",
+    "eslint-plugin-simple-import-sort": "^14.0.0",
     "eslint-plugin-sonarjs": "^4.0.2",
     "eslint-plugin-vue-scoped-css": "^3.0.0",
     "eslint-plugin-wc": "^3.1.0",
@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@types/eslint": "^9.6.1",
-    "@types/node": "^25.5.0",
-    "typescript": "^6.0.2"
+    "@types/node": "^26.5.1",
+    "typescript": "^7.0.2"
   }
 }
