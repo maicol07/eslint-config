@@ -72,4 +72,9 @@ export default antfu({
       'vue/quote-props': ['error', 'as-needed'],
       'vue/object-curly-spacing': ['error', 'never']
     }
+  })
+  .override('antfu/toml/rules', {
+    rules: {
+      'toml/array-bracket-spacing': 'off'
+    }
   });
