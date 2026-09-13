@@ -54,7 +54,7 @@ export default antfu({
   .override('antfu/unicorn/rules', {
     rules: {
       'unicorn/filename-case': 'off',
-      'unicorn/prevent-abbreviations': ['error', {replacements: {props: false}}]
+      'unicorn/name-replacements': ['error', {replacements: {props: false}}]
     }
   })
   .override('antfu/vue/rules', {
