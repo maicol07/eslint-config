@@ -2,5 +2,6 @@
 <project version="4">
   <component name="EslintConfiguration">
     <custom-configuration-file used="true" path="$PROJECT_DIR$/eslint.config.ts" />
+    <files-pattern value="**/*.{js,ts,jsx,tsx,cjs,cts,mjs,mts,html,vue,toml,json}" />
   </component>
 </project>
