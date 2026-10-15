@@ -1,42 +1,118 @@
-## ESLint config
-Personal ESLint config for my projects.
-Based on [Airbnb](https://github.com/iamturns/eslint-config-airbnb-typescript), has rules for:
-- [Mithril](https://www.npmjs.com/package/eslint-plugin-mithril)
-- [TypeScript](http://github.com/typescript-eslint/typescript-eslint)
+# 🧹 ESLint config
 
-## Installation
-### NPM
-```shell
-npm install --save-dev @maicol07/eslint-config
-```
-### Yarn
-```shell
-yarn add --dev @maicol07/eslint-config
+My personal ESLint flat config: [`@antfu/eslint-config`](https://github.com/antfu/eslint-config)
+with my stylistic preferences and the plugins I use for Vue, Lit and web components.
+
+```mermaid
+flowchart LR
+    ANTFU["🧩 @antfu/eslint-config<br/>Vue + a11y, TypeScript, antislop"] --> CFG["🧹 @maicol07/eslint-config"]
+    PLUGINS["🔌 wc, lit, sonarjs,<br/>vue-scoped-css"] --> CFG
+    CFG -- "overrides" --> RULES["🎨 stylistic, unicorn,<br/>vue rules"]
+    CFG --> YOU["💻 your eslint.config.js"]
 ```
 
-### PNPM (recommended)
-```shell
-pnpm add -D @maicol07/eslint-config
-```
-You have to add `*eslint*` to the public-hoist-patterns in your `.npmrc` file to avoid hoisting issues (if you had already it set). Otherwise, it's all handled by PNPM.
+---
 
-## Usage
-Add this to your `.eslintrc` file:
-```json
-{
-  "extends": "@maicol07"
-}
+## 📥 Installation
+
+> [!note]
+> `eslint` (v10) and `typescript` (v5+) are **peer dependencies**: the config uses the ones installed
+> in your project. Recent npm, pnpm and Bun install them automatically if they are missing.
+
+<details open>
+<summary><b>pnpm</b> (recommended)</summary>
+
+```bash
+pnpm add -D @maicol07/eslint-config eslint typescript
 ```
 
-## License
+Add `*eslint*` to `public-hoist-pattern` in your `.npmrc` (if you have overridden it) to avoid
+hoisting issues.
+</details>
+
+<details>
+<summary><b>npm</b></summary>
+
+```bash
+npm install -D @maicol07/eslint-config eslint typescript
+```
+</details>
+
+<details>
+<summary><b>Bun</b></summary>
+
+```bash
+bun add -d @maicol07/eslint-config eslint typescript
+```
+
+With the isolated linker, set `publicHoistPattern = ["*eslint*"]` under `[install]` in `bunfig.toml`.
+</details>
+
+---
+
+## 🚀 Usage
+
+Create an `eslint.config.js` (or `.ts`) in the root of your project:
+
+```js
+export {default} from '@maicol07/eslint-config';
+```
+
+> [!important]
+> Type-aware TypeScript rules read the `tsconfig.json` in the project root: make sure it exists.
+
+The default export is a [`FlatConfigComposer`](https://github.com/antfu/eslint-flat-config-utils),
+so you can extend it:
+
+```js
+import config from '@maicol07/eslint-config';
+
+export default config
+  .append({ignores: ['dist']})
+  .override('antfu/stylistic/rules', {
+    rules: {'style/semi': ['error', 'never']}
+  });
+```
+
+Run `bun run inspector` here (or `npx @eslint/config-inspector` in your project) to browse the
+resulting configs and their names.
+
+### What it includes
+
+| Source | |
+|---|---|
+| [`@antfu/eslint-config`](https://github.com/antfu/eslint-config) | base config, with Vue (+ [a11y](https://github.com/vue-a11y/eslint-plugin-vuejs-accessibility)), type-aware TypeScript and antislop enabled |
+| [`eslint-plugin-wc`](https://github.com/43081j/eslint-plugin-wc) | `recommended` + `best-practice` |
+| [`eslint-plugin-lit`](https://github.com/43081j/eslint-plugin-lit) | `recommended` |
+| [`eslint-plugin-sonarjs`](https://github.com/SonarSource/SonarJS) | `recommended` |
+| [`eslint-plugin-vue-scoped-css`](https://github.com/future-architect/eslint-plugin-vue-scoped-css) | `recommended` |
+| [`globals`](https://github.com/sindresorhus/globals) | browser globals |
+
+On top of these: semicolons, no trailing commas, no spaces inside braces, always parenthesized arrow
+parameters and 1TBS braces. See [`index.ts`](index.ts) for every override.
+
+---
+
+## 👩‍💻 Development
+
+```bash
+git clone https://github.com/maicol07/eslint-config.git && cd eslint-config
+bun install
+bun run build       # compiles index.ts to index.js + index.d.ts
+bun run inspector   # opens the config inspector
+```
+
+### 🔖 Releasing
+
+```bash
+npm version <patch|minor|major>
+npm publish
+```
+
+`prepublishOnly` lints `index.ts` with no warnings allowed and rebuilds before publishing.
+
+---
+
+## 📄 License
+
 MIT
-
-## Contributing
-Feel free to open an issue or a PR.
-
-## Credits
-- [TypeScript](https://www.typescriptlang.org/)
-- [Mithril](https://mithril.js.org/)
-- [ESLint](https://eslint.org/)
-- [Inertia](https://inertiajs.com/)
-- [PNPM](https://pnpm.io/)
