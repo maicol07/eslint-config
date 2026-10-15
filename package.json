@@ -25,9 +25,12 @@
     "prepublishOnly": "eslint --max-warnings=0 index.ts && bun run build",
     "inspector": "bunx @eslint/config-inspector@latest"
   },
+  "peerDependencies": {
+    "eslint": "^10.1.0",
+    "typescript": ">=5 <6.1.0"
+  },
   "dependencies": {
     "@antfu/eslint-config": "^9.5.1",
-    "eslint": "^10.1.0",
     "eslint-flat-config-utils": "^3.0.2",
     "eslint-plugin-lit": "^2.2.1",
     "eslint-plugin-only-warn": "^1.2.1",
@@ -35,12 +38,14 @@
     "eslint-plugin-slop": "^0.1.3",
     "eslint-plugin-sonarjs": "^4.0.2",
     "eslint-plugin-vue-scoped-css": "^3.0.0",
+    "eslint-plugin-vuejs-accessibility": "^2.6.0",
     "eslint-plugin-wc": "^3.1.0",
     "globals": "^17.4.0"
   },
   "devDependencies": {
     "@types/eslint": "^9.6.1",
     "@types/node": "^26.5.1",
+    "eslint": "^10.1.0",
     "jiti": "^2.7.0",
     "typescript": "6.0.3"
   }
