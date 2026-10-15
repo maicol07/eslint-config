@@ -16,8 +16,26 @@ flowchart LR
 ## 📥 Installation
 
 > [!note]
-> `eslint` (v10) and `typescript` (v5+) are **peer dependencies**: the config uses the ones installed
+> `eslint` (v10) and `typescript` (v5 or v6) are **peer dependencies**: the config uses the ones installed
 > in your project. Recent npm, pnpm and Bun install them automatically if they are missing.
+
+> [!warning]
+> **TypeScript 7 is not supported yet**: typescript-eslint and `eslint-plugin-sonarjs` still need
+> the TypeScript 6 API. Status: [#4](https://github.com/maicol07/eslint-config/issues/4).
+>
+> To use TS 7 in your project, alias `typescript` to the TS 6 compatibility package for ESLint and
+> install TS 7 under another name ([details](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/#running-side-by-side-with-typescript-6.0)):
+>
+> ```json
+> {
+>   "devDependencies": {
+>     "@typescript/native": "npm:typescript@^7.0.2",
+>     "typescript": "npm:@typescript/typescript6@^6.0.2"
+>   }
+> }
+> ```
+>
+> `npx tsc` then runs TS 7, and ESLint keeps using TS 6.
 
 <details open>
 <summary><b>pnpm</b> (recommended)</summary>
