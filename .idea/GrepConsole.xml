@@ -6,7 +6,7 @@
         <option name="items">
           <set>
             <TailItem>
-              <option name="path" value="$USER_HOME$/AppData/Local/JetBrains/PhpStorm2024.3/log/idea.log" />
+              <option name="path" value="$USER_HOME$/AppData/Local/JetBrains/PhpStorm2026.3/log/idea.log" />
             </TailItem>
           </set>
         </option>
